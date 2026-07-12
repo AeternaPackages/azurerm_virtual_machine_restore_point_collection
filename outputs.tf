@@ -1,4 +1,9 @@
 # --- azurerm_virtual_machine_restore_point_collection ---
+output "virtual_machine_restore_point_collections_id" {
+  description = "Map of id values across all virtual_machine_restore_point_collections, keyed the same as var.virtual_machine_restore_point_collections"
+  value       = module.virtual_machine_restore_point_collections.virtual_machine_restore_point_collections_id
+}
+
 output "virtual_machine_restore_point_collections_location" {
   description = "Map of location values across all virtual_machine_restore_point_collections, keyed the same as var.virtual_machine_restore_point_collections"
   value       = module.virtual_machine_restore_point_collections.virtual_machine_restore_point_collections_location
@@ -25,6 +30,11 @@ output "virtual_machine_restore_point_collections_tags" {
 }
 
 # --- azurerm_virtual_machine_restore_point ---
+output "virtual_machine_restore_points_id" {
+  description = "Map of id values across all virtual_machine_restore_points, keyed the same as var.virtual_machine_restore_points"
+  value       = module.virtual_machine_restore_points.virtual_machine_restore_points_id
+}
+
 output "virtual_machine_restore_points_crash_consistency_mode_enabled" {
   description = "Map of crash_consistency_mode_enabled values across all virtual_machine_restore_points, keyed the same as var.virtual_machine_restore_points"
   value       = module.virtual_machine_restore_points.virtual_machine_restore_points_crash_consistency_mode_enabled
