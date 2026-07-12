@@ -5,7 +5,7 @@ locals {
     for k1, v1 in var.virtual_machine_restore_point_collections : {
       for k2, v2 in coalesce(v1.virtual_machine_restore_points, {}) :
       "${k1}/${k2}" => merge(v2, {
-        virtual_machine_restore_point_collection_id = module.virtual_machine_restore_point_collections.virtual_machine_restore_point_collections["${k1}"].id
+        virtual_machine_restore_point_collection_id = module.virtual_machine_restore_point_collections.virtual_machine_restore_point_collections_id["${k1}"]
       })
     }
   ]...)
