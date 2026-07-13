@@ -24,7 +24,7 @@ EOT
     tags                      = optional(map(string))
     virtual_machine_restore_points = optional(map(object({
       name                           = string
-      crash_consistency_mode_enabled = optional(bool) # Default: false
+      crash_consistency_mode_enabled = optional(bool)
       excluded_disks                 = optional(set(string))
     })))
   }))
