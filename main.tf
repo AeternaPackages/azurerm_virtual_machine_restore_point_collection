@@ -12,12 +12,12 @@ locals {
 }
 
 module "virtual_machine_restore_point_collections" {
-  source                                    = "git::https://github.com/AeternaModules/azurerm_virtual_machine_restore_point_collection.git?ref=v4.81.0"
+  source                                    = "git::https://github.com/AeternaModules/azurerm_virtual_machine_restore_point_collection.git?ref=v5.0.0"
   virtual_machine_restore_point_collections = local.virtual_machine_restore_point_collections
 }
 
 module "virtual_machine_restore_points" {
-  source                         = "git::https://github.com/AeternaModules/azurerm_virtual_machine_restore_point.git?ref=v4.81.0"
+  source                         = "git::https://github.com/AeternaModules/azurerm_virtual_machine_restore_point.git?ref=v5.0.0"
   virtual_machine_restore_points = local.virtual_machine_restore_points
   depends_on                     = [module.virtual_machine_restore_point_collections]
 }
